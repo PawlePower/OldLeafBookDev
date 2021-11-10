@@ -1,20 +1,26 @@
 import React from 'react'
 import './Footer.css'
-import FacebookOutlinedIcon from '@material-ui/icons/FacebookOutlined';
-
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import logo from '../assets/logo.png'
 function Footer() {
     return (
         <div>
             <footer class="footer">
 <div class="l-footer">
-<h1>
-<img src="https://i.postimg.cc/y62wcLBq/logo.png" alt=""/></h1>
+
+<img src={logo} alt="" style= {{width: "120px"}} />
 <p>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam atque recusandae in sit sunt molestiae aliquid fugit. Mollitia eaque tempore iure sit nobis? Vitae nemo, optio maiores numquam quis recusandae.</p>
-</div>
 <div>
-        <FacebookOutlinedIcon/> 
+        <FacebookIcon/>
+        <InstagramIcon/>
+        <TwitterIcon/>  
+
 </div>  
+</div>
+
 <ul class="r-footer">
 <li>
   <h2>Explore</h2>

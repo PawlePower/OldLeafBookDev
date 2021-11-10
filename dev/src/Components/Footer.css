@@ -62,7 +62,7 @@
     }
     
     .box a {
-    color: #999;
+    color: rgb(255, 255, 255);
     }
     
     .h-box {
@@ -71,13 +71,12 @@
     
     .b-footer {
     text-align: center;
-    color: #999;
+    color: rgb(255, 255, 255);
     padding-top: 50px;
     }
     
     .l-footer p {
-    padding-right: 20%;
-    color: #999;
+    color:rgb(255, 255, 255);
     }   
     
     @media screen and (min-width: 600px) {
