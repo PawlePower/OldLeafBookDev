@@ -1,13 +1,13 @@
-*, *:before, *:after {
+/* *, *:before, *:after {
     box-sizing: border-box;
-    }
+    } */
     
-    body {
+    /* body {
     font-family: poppins;
     margin: 0;
     display: grid;
     font-size: 14px;
-    }
+    } */
     header p {
     padding: 50px;
     text-align: center;
