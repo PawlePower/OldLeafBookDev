@@ -1,13 +1,13 @@
-/* *, *:before, *:after {
+*, *:before, *:after {
     box-sizing: border-box;
-    } */
+    }
     
-    /* body {
-    font-family: poppins;
+    .container_body {
+    /* font-family: poppins; */
     margin: 0;
     display: grid;
     font-size: 14px;
-    } */
+    }
     header p {
     padding: 50px;
     text-align: center;
@@ -16,6 +16,7 @@
     font-size: 65px;
     font-weight: 700;
     }
+
     .footer {
     display: flex;
     flex-flow: row wrap;

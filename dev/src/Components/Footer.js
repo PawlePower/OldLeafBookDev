@@ -3,14 +3,16 @@ import './Footer.css'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import logo from '../assets/logo.png'
+import logo from '../assets/oldleaflogo.PNG';
+
+
 function Footer() {
     return (
-        <div>
+        <div class="container_body">
             <footer class="footer">
 <div class="l-footer">
 
-<img src={logo} alt="" style= {{width: "120px"}} />
+<img src={logo} alt="" style= {{width: "99px"}} />
 <p>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam atque recusandae in sit sunt molestiae aliquid fugit. Mollitia eaque tempore iure sit nobis? Vitae nemo, optio maiores numquam quis recusandae.</p>
 <div>

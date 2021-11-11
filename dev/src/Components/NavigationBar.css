@@ -35,14 +35,18 @@ nav .nav-items li{
   padding: 0 15px;
 }
 nav .nav-items li a{
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
+  padding-bottom: 6px;
 }
-nav .nav-items li a:hover{
-  color: #ff3d00;
-}
+/* nav .nav-items li a:hover{
+  color: #ff3d00; 
+
+} */
+
+
 nav form{
   display: flex;
   height: 40px;
@@ -77,16 +81,16 @@ nav form button:hover{
 nav .menu-icon,
 nav .cancel-icon,
 nav .search-icon{
-  width: 40px;
+  /* width: 40px; */
   text-align: center;
-  margin: 0 50px;
+  margin: 0 7px 0px 46px;
   font-size: 18px;
   color: #fff;
   cursor: pointer;
   display: none;
 }
 nav .menu-icon span,
-nav .cancel-icon,
+nav .cancel-icon,.cancel-icon-bars,
 nav .search-icon{
   display: none;
 }
@@ -96,9 +100,23 @@ nav .search-icon{
   }
 }
 /* ------------------------------------------------------------------------------------- */
+@media (max-width: 580px) {
+   /* nav .cancel-icon.show
+    {
+        top: 144%;
+        left: 40.7%;
+    } */
+
+}
+
+
 @media (max-width: 600px) {
     #wishlist {
       display: none;
+    }
+    #userIcon
+    {
+      margin: 0px !important;
     }
     #cart{
         display: none;
@@ -109,14 +127,19 @@ nav .search-icon{
     }
     #cancelicon
     {
-        color:rgb(0, 0, 0);
+        color:rgb(255, 255, 255);
     }
-    .cancel-icon
+    /* .cancel-icon
     {
         position: absolute !important;
         z-index: 999 !important;
         top: 100px !important;
-    }
+    } */
+    /* .cancel-icon
+    {
+      top: 16% ;
+      left: 12.7% ;
+    } */
     /* .logo
     {
         display:none !important;
@@ -134,9 +157,19 @@ nav .search-icon{
   nav{
     padding: 0px;
   }
+  #userIcon
+  {
+    margin: 0 46px 0px 0px;
+  }
   nav .logo{
     flex: 2;
     text-align: center;
+
+  }
+  #icon_logo
+  {
+    width: 99px;
+    float: left;
   }
   nav .nav-items{
     position: fixed;
@@ -147,7 +180,7 @@ nav .search-icon{
     height: 100%;
     padding: 10px 50px 0 50px;
     text-align: center;
-    background: #1bb97899;
+    background: #20a870f0;
     display: inline-block;
     transition: left 0.3s ease;
   }
@@ -160,6 +193,7 @@ nav .search-icon{
   }
   nav .nav-items li a{
     font-size: 20px;
+    color:white;
   }
   nav form{
     position: absolute;
@@ -168,6 +202,9 @@ nav .search-icon{
     opacity: 0;
     pointer-events: none;
     transition: top 0.3s ease, opacity 0.1s ease;
+    border: 3px solid transparent;
+    border-bottom-color: #1bb978;
+    
   }
   nav form.active{
     top: 95px;
@@ -182,8 +219,8 @@ nav .search-icon{
     width: 0;
     height: 0;
     z-index: -1;
-    border: 10px solid transparent;
-    border-bottom-color: #1bb978;
+    /* border: 3px solid transparent;
+    border-bottom-color: #1bb978; */
     margin: -20px 0 0;
   }
   nav form:after{
@@ -191,7 +228,7 @@ nav .search-icon{
     content: '';
     height: 60px;
     padding: 1px;
-    background: #1bb978;
+    /* background: #1bb978; */
     border-radius: 3px;
     min-width: calc(100% + 20px);
     z-index: -2;
@@ -201,6 +238,7 @@ nav .search-icon{
   }
   nav .menu-icon{
     display: block;
+    margin: 0 0px 0px 46px;
   }
   nav .search-icon,
   nav .menu-icon span{
@@ -212,6 +250,12 @@ nav .search-icon{
   }
   nav .cancel-icon.show{
     display: block;
+    /* top: 147%;
+    left: 58.7%; */
+  }
+  nav .cancel-icon-bars.show{
+    display: block;
+    margin: 0 0px 0px 0px;
   }
 }
 .content{
@@ -238,20 +282,47 @@ nav .logo.space{
 }
 @media (max-width: 980px){
   nav .menu-icon,
-  nav .cancel-icon,
   nav .search-icon{
-    margin: 0 20px;
+    margin: 0 0px 0 20px;
   }
   nav form{
     right: 30px;
+    width: 204px;
+  }
+  /* .cancel-icon
+  {
+    top: 10% ;
+    left: 59.7% ;
+  } */
+  #icon_logo
+  {
+        width: 54px !important;
+        /* left: 16.5% !important;
+        position: absolute !important;
+        top: 1.8% !important; */
   }
 }
 @media (max-width: 350px){
-  nav .menu-icon,
-  nav .cancel-icon,
-  nav .search-icon{
+    /* .cancel-icon
+    {
+      top: 145%;
+      left: -19.3%;
+    } */
+  nav ,
+    nav .search-icon{
     margin: 0 10px;
     font-size: 16px;
+  }
+  .menu-icon
+  {
+      margin: 0;
+  }
+
+
+  #userIcon
+  {
+    width: 64px !important;
+    margin:0;
   }
 }
 .content{
@@ -322,4 +393,25 @@ nav .logo.space{
 .rounded-circle
 {
     height: 34px;
+}
+.cancel-icon
+{
+    width:27px !important;
+    color: rgb(255, 255, 255) !important;
+    /* position: absolute !important; */
+    /* top: 17% ;
+    left: 59.7% ; */
+    border-radius: 100px !important;
+    background-color: #1bb978 !important;
+    margin: 0px !important;
+}
+
+#canceliconbars
+{
+    text-align: center;
+    margin: 0px;
+    font-size: 22.9px;
+    color: #fff;
+    cursor: pointer;
+    color:#1bb978 !important;
 }

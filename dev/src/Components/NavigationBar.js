@@ -1,5 +1,7 @@
 import React from 'react'
 import './NavigationBar.css'
+import logo from '../assets/oldleaflogo.PNG';
+import '../App.css';
 
 
 
@@ -7,17 +9,20 @@ function NavigationBar() {
     
     return (
         <div>
-                <nav>
+                <nav class="fixed-top">
          <div class="menu-icon">
             <span class="fas fa-bars" id="bars"></span>
          </div>
+         <div class="cancel-icon-bars">
+            <span class="fas fa-times" id="canceliconbars" ></span>
+         </div>
          <div class="logo">
-            <img src="" alt="logo"/>
+            <img src={logo} alt="logo" style={{width: "99px"}} id="icon_logo"/>
          </div>
          <div class="nav-items">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li ><a class="hvr-underline-from-left" href="#">Home</a></li>
+            <li><a class="hvr-underline-from-left" href="#">Shop</a></li>
+            <li><a class="hvr-underline-from-left" href="#">Contact us</a></li>
          </div>
          <div class="search-icon">
             <span class="fas fa-search" id="searchicon"></span>
@@ -68,26 +73,42 @@ window.onload = function () {
     const menuBtn = document.querySelector(".menu-icon span");
 const searchBtn = document.querySelector(".search-icon");
 const cancelBtn = document.querySelector(".cancel-icon");
+const cancelBtnbars = document.querySelector(".cancel-icon-bars");
 const items = document.querySelector(".nav-items");
 const form = document.querySelector("form");
 menuBtn.onclick = ()=>{
   items.classList.add("active");
   menuBtn.classList.add("hide");
   searchBtn.classList.add("hide");
-  cancelBtn.classList.add("show");
+  cancelBtn.classList.remove("show");
+  cancelBtnbars.classList.add("show");
+  form.classList.remove("active");
 }
-cancelBtn.onclick = ()=>{
+cancelBtnbars.onclick = ()=>{
   items.classList.remove("active");
   menuBtn.classList.remove("hide");
-  searchBtn.classList.remove("hide");
   cancelBtn.classList.remove("show");
   form.classList.remove("active");
-  cancelBtn.style.color = "#ff3d00";
+  cancelBtn.style.color = "red";
+  searchBtn.classList.remove("hide");
+  cancelBtnbars.classList.remove("show");
 }
+cancelBtn.onclick = ()=>{
+    items.classList.remove("active");
+    menuBtn.classList.remove("hide");
+    searchBtn.classList.remove("hide");
+    searchBtn.classList.add("show");
+    cancelBtn.classList.remove("show");
+    form.classList.remove("active");
+    cancelBtn.style.color = "#ff3d00";
+    
+  }
 searchBtn.onclick = ()=>{
   form.classList.add("active");
   searchBtn.classList.add("hide");
   cancelBtn.classList.add("show");
+  cancelBtnbars.classList.add("hide");
+
 }
 }
 
