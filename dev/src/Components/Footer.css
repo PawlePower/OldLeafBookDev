@@ -3,10 +3,10 @@
     }
     
     .container_body {
-    /* font-family: poppins; */
     margin: 0;
     display: grid;
     font-size: 14px;
+    text-align: center;
     }
     header p {
     padding: 50px;

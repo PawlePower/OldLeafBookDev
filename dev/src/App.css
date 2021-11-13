@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Oxygen-Regular;
+  src: url('./assets/Fonts/Oxygen/Oxygen-Regular.ttf');
+}
 /* .App {
   text-align: center;
 }
@@ -49,6 +53,11 @@
  */
 /* 2D TRANSITIONS */
 /* Grow */
+
+*{
+  font-family:Oxygen-Regular;
+}
+
 .hvr-grow {
   display: inline-block;
   vertical-align: middle;
