@@ -5,6 +5,7 @@ import Newsletter from './Components/Newsletter';
 import NavigationBar from './Components/NavigationBar';
 import CarouselSlider from './Components/CarouselSlider';
 import AuthorComponent from './Components/AuthorComponent';
+import HomeImgCard from './Components/HomeImgCard';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <div><NavigationBar/></div>
       <div><CarouselSlider/></div>
       <div><AuthorComponent/></div>
+      <div><HomeImgCard></HomeImgCard></div>
       <Newsletter/>
       <Footer/>
     </div>
