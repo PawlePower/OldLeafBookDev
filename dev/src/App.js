@@ -4,6 +4,7 @@ import Footer from './Components/Footer';
 import Newsletter from './Components/Newsletter';
 import NavigationBar from './Components/NavigationBar';
 import CarouselSlider from './Components/CarouselSlider';
+import AuthorComponent from './Components/AuthorComponent';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     <div className="App">
       <div><NavigationBar/></div>
       <div><CarouselSlider/></div>
-      
+      <div><AuthorComponent/></div>
       <Newsletter/>
       <Footer/>
     </div>
