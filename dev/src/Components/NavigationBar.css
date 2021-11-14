@@ -114,6 +114,10 @@ nav .search-icon{
     #wishlist {
       display: none;
     }
+    /* .fixed-top{
+      height: 15vw !important;
+    } */
+    
     #userIcon
     {
       margin: 0px !important;
@@ -308,16 +312,17 @@ nav .logo.space{
       top: 145%;
       left: -19.3%;
     } */
+
+ 
   nav ,
     nav .search-icon{
-    margin: 0 10px;
+    /* margin: 0 10px; */
     font-size: 16px;
   }
   .menu-icon
   {
       margin: 0;
   }
-
 
   #userIcon
   {

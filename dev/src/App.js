@@ -9,8 +9,9 @@ import CarouselSlider from './Components/CarouselSlider';
 function App() {
   return (
     <div className="App">
-      <NavigationBar/>
-      <CarouselSlider/>
+      <div><NavigationBar/></div>
+      <div><CarouselSlider/></div>
+      
       <Newsletter/>
       <Footer/>
     </div>

@@ -1,0 +1,42 @@
+.carousel-wrapper,
+.carousel,
+.carousel > .slider-wrapper,
+.carousel > .slider-wrapper > .slider {
+    height: 39vw !important;
+}
+
+.container-md
+{
+    margin-top: 8%;
+    max-width: 100%;
+}
+
+.img_slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+  }
+
+@media (max-width:980px){
+    
+    .container-md
+    {
+        margin-top: 12%;
+    }
+}
+
+@media (max-width:600px)
+{
+    .container-md
+    {
+      margin-top: 21%;
+    }
+}
+
+/* @media (min-width:1200px)
+{
+    .container-md
+    {
+        max-width: 100%;
+    }
+} */
