@@ -6,6 +6,7 @@ import NavigationBar from './Components/NavigationBar';
 import CarouselSlider from './Components/CarouselSlider';
 import AuthorComponent from './Components/AuthorComponent';
 import HomeImgCard from './Components/HomeImgCard';
+import ThreeCardComponent from './Components/ThreeCardComponent';
 
 
 function App() {
@@ -13,8 +14,10 @@ function App() {
     <div className="App">
       <div><NavigationBar/></div>
       <div><CarouselSlider/></div>
+      
+      {/* <div><HomeImgCard></HomeImgCard></div> */}
+      <div><ThreeCardComponent></ThreeCardComponent></div>
       <div><AuthorComponent/></div>
-      <div><HomeImgCard></HomeImgCard></div>
       <Newsletter/>
       <Footer/>
     </div>

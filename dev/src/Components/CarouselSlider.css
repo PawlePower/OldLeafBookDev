@@ -2,7 +2,7 @@
 .carousel,
 .carousel > .slider-wrapper,
 .carousel > .slider-wrapper > .slider {
-    height: 39vw !important;
+    height: 39vw ;
 }
 
 .container-md
@@ -40,3 +40,14 @@
         max-width: 100%;
     }
 } */
+
+@media (max-width:400px)
+{
+    .carousel-wrapper,
+.carousel,
+.carousel > .slider-wrapper,
+.carousel > .slider-wrapper > .slider
+    {
+        height :57vw ;
+    }
+}
