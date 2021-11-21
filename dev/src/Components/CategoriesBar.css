@@ -2,10 +2,71 @@
 .navbar .dropdown-menu div[class*="col"] {
     margin-bottom:1rem;
  }
+#marginTop
+{
+  /* margin-top: 15px; */
+  margin-top: 21px;
+width: 100%;
+border: 0px;
+border-bottom: 2px solid;
+border-top: 1px solid;
+border-image: linear-gradient(to right, rgb(0, 255, 135), rgb(58, 213, 191));
+border-image-slice: 1;
+}
+
+.position
+{
+  position: fixed;
+  z-index: 999;
+  width: inherit;
+  border: 0px;
+  border-bottom: 4px solid;
+  border-top:1px solid;
+  border-image: linear-gradient(to right, rgb(32, 255, 0), rgb(29, 198, 47));
+  border-image-slice: 1;
+}
+
+
+ .container_catogoriesBar{
+  z-index: 22;
+  position: fixed;
+  width: 100%;
+  top: 70px;
+ }
  
+ .dropdown_row
+ {
+  width: 100%;
+ }
+
+ .height
+ {
+  height: auto;
+ }
+ .text
+ {
+  color: #146f4f !important;
+ }
+#navbarDropdown
+{
+  color: #146f4f;
+}
+ #navbarSupportedContent
+ {
+  background: inherit;
+  z-index: 33;
+  padding-left: 6px;
+  padding-right: 6px;  
+  margin-top: 10px;
+ }
+
+ .dropdown_container{
+   margin: 0;
+ }
+
  .navbar .dropdown-menu {
    border:none;
-   background-color:#0060c8!important;
+   /* //background-color:#0060c8!important; */
  }
  
  /* breakpoint and up - mega dropdown styles */
@@ -49,6 +110,7 @@
    visibility: visible;
    opacity: 1;
    transition: visibility 0s, opacity 0.3s linear;
+   margin-top: 15px;
  }
    
    .navbar .dropdown-menu {
@@ -64,7 +126,7 @@
  
  .navbar .dropdown-menu {
    border:none;
-   background-color:#0060c8!important;
+   /* background-color:#0060c8!important; */
  }
  
  /* breakpoint and up - mega dropdown styles */

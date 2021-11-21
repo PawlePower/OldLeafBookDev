@@ -13,8 +13,9 @@ import CategoriesBar from "./Components/CategoriesBar";
 function App() {
   return (
     <div className="App">
-      <div><NavigationBar/></div>
-      <div><CategoriesBar></CategoriesBar></div>
+      <div ><NavigationBar/></div>
+      <div style={{marginTop : "-6px"}}><CategoriesBar></CategoriesBar></div>
+      {/* <div><CategoriesBar ></CategoriesBar></div> */}
       <div><CarouselSlider/></div>
       
       {/* <div><HomeImgCard></HomeImgCard></div> */}

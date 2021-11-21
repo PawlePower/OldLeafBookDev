@@ -2,6 +2,7 @@ import React from 'react'
 import './NavigationBar.css'
 import logo from '../assets/oldleaflogo.PNG';
 import '../App.css';
+import CategoriesBar from './CategoriesBar'
 
 
 
@@ -9,7 +10,7 @@ function NavigationBar() {
     
     return (
         <div>
-                <nav class="fixed-top">
+                <nav class="top">
          <div class="menu-icon">
             <span class="fas fa-bars" id="bars"></span>
          </div>
@@ -17,7 +18,7 @@ function NavigationBar() {
             <span class="fas fa-times" id="canceliconbars" ></span>
          </div>
          <div class="logo">
-            <img src={logo} alt="logo" style={{width: "99px"}} id="icon_logo"/>
+            <img src={logo} alt="logo" style={{width: "81px"}} id="icon_logo"/>
          </div>
          <div class="nav-items">
             <li ><a class="hvr-underline-from-left" href="#">Home</a></li>
@@ -63,8 +64,9 @@ function NavigationBar() {
             </li>
   
           </ul>
-
+         
       </nav>
+
         </div>
     )
 }
