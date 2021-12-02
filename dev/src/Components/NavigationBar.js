@@ -2,6 +2,7 @@ import React from 'react'
 import './NavigationBar.css'
 import logo from '../assets/oldleaflogo.PNG';
 import '../App.css';
+import CategoriesBar from './CategoriesBar'
 
 
 
@@ -9,7 +10,7 @@ function NavigationBar() {
     
     return (
         <div>
-                <nav class="fixed-top">
+                <nav class="top">
          <div class="menu-icon">
             <span class="fas fa-bars" id="bars"></span>
          </div>
@@ -17,7 +18,7 @@ function NavigationBar() {
             <span class="fas fa-times" id="canceliconbars" ></span>
          </div>
          <div class="logo">
-            <img src={logo} alt="logo" style={{width: "99px"}} id="icon_logo"/>
+            <img src={logo} alt="logo" style={{width: "81px"}} id="icon_logo"/>
          </div>
          <div class="nav-items">
             <li ><a class="hvr-underline-from-left" href="#">Home</a></li>
@@ -63,54 +64,55 @@ function NavigationBar() {
             </li>
   
           </ul>
-
+         
       </nav>
+
         </div>
     )
 }
 
-window.onload = function () {
-    const menuBtn = document.querySelector(".menu-icon span");
-const searchBtn = document.querySelector(".search-icon");
-const cancelBtn = document.querySelector(".cancel-icon");
-const cancelBtnbars = document.querySelector(".cancel-icon-bars");
-const items = document.querySelector(".nav-items");
-const form = document.querySelector("form");
-menuBtn.onclick = ()=>{
-  items.classList.add("active");
-  menuBtn.classList.add("hide");
-  searchBtn.classList.add("hide");
-  cancelBtn.classList.remove("show");
-  cancelBtnbars.classList.add("show");
-  form.classList.remove("active");
-}
-cancelBtnbars.onclick = ()=>{
-  items.classList.remove("active");
-  menuBtn.classList.remove("hide");
-  cancelBtn.classList.remove("show");
-  form.classList.remove("active");
-  cancelBtn.style.color = "red";
-  searchBtn.classList.remove("hide");
-  cancelBtnbars.classList.remove("show");
-}
-cancelBtn.onclick = ()=>{
-    items.classList.remove("active");
-    menuBtn.classList.remove("hide");
-    searchBtn.classList.remove("hide");
-    searchBtn.classList.add("show");
-    cancelBtn.classList.remove("show");
-    form.classList.remove("active");
-    cancelBtn.style.color = "#ff3d00";
+// window.onload = function () {
+//     const menuBtn = document.querySelector(".menu-icon span");
+// const searchBtn = document.querySelector(".search-icon");
+// const cancelBtn = document.querySelector(".cancel-icon");
+// const cancelBtnbars = document.querySelector(".cancel-icon-bars");
+// const items = document.querySelector(".nav-items");
+// const form = document.querySelector("form");
+// menuBtn.onclick = ()=>{
+//   items.classList.add("active");
+//   menuBtn.classList.add("hide");
+//   searchBtn.classList.add("hide");
+//   cancelBtn.classList.remove("show");
+//   cancelBtnbars.classList.add("show");
+//   form.classList.remove("active");
+// }
+// cancelBtnbars.onclick = ()=>{
+//   items.classList.remove("active");
+//   menuBtn.classList.remove("hide");
+//   cancelBtn.classList.remove("show");
+//   form.classList.remove("active");
+//   cancelBtn.style.color = "red";
+//   searchBtn.classList.remove("hide");
+//   cancelBtnbars.classList.remove("show");
+// }
+// cancelBtn.onclick = ()=>{
+//     items.classList.remove("active");
+//     menuBtn.classList.remove("hide");
+//     searchBtn.classList.remove("hide");
+//     searchBtn.classList.add("show");
+//     cancelBtn.classList.remove("show");
+//     form.classList.remove("active");
+//     cancelBtn.style.color = "#ff3d00";
     
-  }
-searchBtn.onclick = ()=>{
-  form.classList.add("active");
-  searchBtn.classList.add("hide");
-  cancelBtn.classList.add("show");
-  cancelBtnbars.classList.add("hide");
+//   }
+// searchBtn.onclick = ()=>{
+//   form.classList.add("active");
+//   searchBtn.classList.add("hide");
+//   cancelBtn.classList.add("show");
+//   cancelBtnbars.classList.add("hide");
 
-}
-}
+// }
+// }
 
 
 export default NavigationBar

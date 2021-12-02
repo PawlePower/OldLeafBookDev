@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+
+
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -4199,3 +4203,17 @@
 }
 
 /*# sourceMappingURL=hover.css.map */
+
+
+.text
+{
+    justify-content: center;
+    display: flex;
+    color: #438c72;
+    
+}
+
+.be_h2
+{
+  font-size: 2rem !important;
+}
