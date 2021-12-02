@@ -1,54 +1,87 @@
-import React from 'react'
-import './CategoriesBar.css'
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-// import $ from 'jquery'
+import React from 'react';
+import logo from '../assets/oldleaflogo.PNG';
+import './Header.css';
+import SearchIcon from '@material-ui/icons/Search'
 
-const $ = window.$;
-window.onload = function () {
-    $(document).ready(function() {
-        // executes when HTML-Document is loaded and DOM is ready
-       
-       // breakpoint and up  
-       $(window).resize(function(){
-         if ($(window).width() >= 1024){  
-       
-             // when you hover a toggle show its dropdown menu
-             $(".navbar .dropdown-toggle").hover(function () {
-                $(this).parent().toggleClass("show");
-                $(this).parent().find(".dropdown-menu").toggleClass("show"); 
-              });
-       
-               // hide the menu when the mouse leaves the dropdown
-             $( ".navbar .dropdown-menu" ).mouseleave(function() {
-               $(this).removeClass("show");  
-             });
-         
-           // do something here
-         } 
-       });  
-         
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour
+         in place of 'smooth' */
+    });
 
-       
-       // document ready  
-       });
+    const icon = document.getElementsByClassName("fas fa-bars");
+  // const btn =document.querySelector(".navbar-toggler");
 
-
+console.log(icon.className);
+if (icon.className=="fas fa-bars")
+ {
+  icon.classList.remove('fas fa-bars');
+  icon.classList.add('fas fa-times');
+ }
+   
   
-    }
 
+  }
+function Header() {
 
-function CategoriesBar() {
-  
     return (
-        <div className="container_catogoriesBar height">
-          <nav class="navbar navbar-expand-lg navbar-dark height position">
-      <div className="menuicon">
-  <button class="navbar-toggler" style={{border:"none"}} type="button" 
+        <div className="header__container">
+<nav className="header__header">
+
+<div className="menuicon" >
+  <button class="navbar-toggler" onClick={scrollToTop}  type="button" 
   data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-   aria-expanded="false" aria-label="Toggle navigation">
+   aria-expanded="false" aria-label="Toggle navigation" style={{width:"100%"}}>
   <span class="fas fa-bars" id="bars"></span>
   </button>
 </div>
+            <img className="header__logo" src={logo} alt="OldLeafBooks.com" />
+
+            <div className="header__search">
+                <input type="text" className="header_searchInput" />
+                <SearchIcon className="header__icons"></SearchIcon>
+            </div>
+
+           <div className="header__nav">
+               <div className="header__link">
+                   <div className="header__options">
+                   <span className="header__optionsLineOne">Hello AKshay</span>
+                   <span className="header__optionsLineTwo">Sign Out</span>
+                   </div>
+               </div>
+
+               <div className="header__link">
+                   <div className="header__options">
+                   <span className="header__optionsLineTwo">My Order</span>
+                   {/* <span>Sign In</span> */}
+                   </div>
+               </div>
+
+               <div className="header__link">
+                   <div className="header__options">
+                   <span className="far fa-heart pl-0" id="header__optionsLineheart"></span>
+                   {/* <span>Sign In</span> */}
+                   </div>
+               </div>
+
+               <div className="header__link">
+                   <div className="header__options">
+                   <span className="fas fa-shopping-cart pl-0" id="header__optionsLineCart"></span>
+                   {/* <span>Sign In</span> */}
+                   </div>
+               </div>
+
+ 
+
+           </div>
+        </nav>
+
+{/* --------------------------------------------------Categogies---------------------------------------------------------- */}
+
+<nav class="navbar navbar-expand-lg navbar-dark height position" style={{width:"100%",top:"50px"}}>
+      
   <div class="collapse navbar-collapse height" id="navbarSupportedContent">
     <ul class="navbar-nav " style={{margin:"auto"}}>
       <li class="nav-item dropdown">
@@ -90,6 +123,21 @@ function CategoriesBar() {
               </ul>
               </div>
               {/* <!-- /.col-md-4  --> */}
+              <div class="col-md-4">
+              <span class="text-uppercase text">Sub Category</span>
+                <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+              </ul>
+              </div>
+              {/* <!-- /.col-md-4  --> */}
               {/* <div class="col-md-4">
                 <a href="">
                   <img src="https://dummyimage.com/200x100/ccc/000&text=image+link" alt="" class="img-fluid"/>
@@ -105,113 +153,7 @@ function CategoriesBar() {
 
         </div>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Category
-        </a>
-        <div class="dropdown-menu" id="marginTop" aria-labelledby="navbarDropdown">
 
-
-          <div class="container dropdown_container">
-            <div class="row dropdown_row">
-              <div class="col-md-4">
-                <span class="text-uppercase text">Sub Category 2</span>
-                <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link text" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text" href="#">Link item</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text" href="#">Link item</a>
-                </li>
-              </ul>
-              </div>
-              {/* <!-- /.col-md-4  --> */}
-              <div class="col-md-4">
-                <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link text" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text" href="#">Link item</a>
-                </li>
-                <li class="nav-item text">
-                  <a class="nav-link" href="#">Link item</a>
-                </li>
-              </ul>
-              </div>
-              {/* <!-- /.col-md-4  --> */}
-              <div class="col-md-4">
-                <a href="">
-                  <img src="https://dummyimage.com/200x100/ccc/000&text=image+link" alt="" class="img-fluid"/>
-                </a>
-                <p class="text">Short image call to action</p>
-
-              </div>
-              {/* <!-- /.col-md-4  --> */}
-            </div>
-          </div>
-          {/* <!--  /.container  --> */}
-
-
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Category
-        </a>
-        <div class="dropdown-menu" id="marginTop" aria-labelledby="navbarDropdown">
-
-
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-               <span class="text-uppercase text">Category 3</span>
-                <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link item</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link item</a>
-                </li>
-              </ul>
-              </div>
-              {/* <!-- /.col-md-4  --> */}
-              <div class="col-md-4">
-                <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link item</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link item</a>
-                </li>
-              </ul>
-              </div>
-              {/* <!-- /.col-md-4  --> */}
-              <div class="col-md-4">
-
-                <a href="">
-                  <img src="https://dummyimage.com/200x100/ccc/000&text=image+link" alt="" class="img-fluid"/>
-                </a>
-                <p class="text">Short image call to action</p>
-                
-              </div>
-              {/* <!-- /.col-md-4  --> */}
-            </div>
-          </div>
-          {/* <!--  /.container  --> */}
-
-
-        </div>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Category
@@ -239,8 +181,8 @@ function CategoriesBar() {
               <div class="col-md-4">
               <span class="text-uppercase text">Sub Category</span>
                 <ul class="nav flex-column">
-                <li class="nav-item text">
-                  <a class="nav-link active" href="#">Active</a>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Active</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text" href="#">Link item</a>
@@ -251,8 +193,7 @@ function CategoriesBar() {
               </ul>
               </div>
               {/* <!-- /.col-md-4  --> */}
-                            {/* <!-- /.col-md-4  --> */}
-                            <div class="col-md-4">
+              <div class="col-md-4">
               <span class="text-uppercase text">Sub Category</span>
                 <ul class="nav flex-column">
                 <li class="nav-item">
@@ -282,6 +223,152 @@ function CategoriesBar() {
 
         </div>
       </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Category
+        </a>
+        <div class="dropdown-menu" id="marginTop" aria-labelledby="navbarDropdown">
+
+          
+          <div class="container dropdown_container">
+            <div class="row dropdown_row">
+              <div class="col-md-4">
+                <span class="text-uppercase text">Sub Category</span>
+                <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+              </ul>
+              </div>
+              {/* <!-- /.col-md-4  --> */}
+              <div class="col-md-4">
+              <span class="text-uppercase text">Sub Category</span>
+                <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+              </ul>
+              </div>
+              {/* <!-- /.col-md-4  --> */}
+              <div class="col-md-4">
+              <span class="text-uppercase text">Sub Category</span>
+                <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+              </ul>
+              </div>
+              {/* <!-- /.col-md-4  --> */}
+              {/* <div class="col-md-4">
+                <a href="">
+                  <img src="https://dummyimage.com/200x100/ccc/000&text=image+link" alt="" class="img-fluid"/>
+                </a>
+                <p class="text">Short image call to action</p>
+
+              </div> */}
+              {/* <!-- /.col-md-4  --> */}
+            </div>
+          </div>
+          {/* <!--  /.container  --> */}
+
+
+        </div>
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Category
+        </a>
+        <div class="dropdown-menu" id="marginTop" aria-labelledby="navbarDropdown">
+
+          
+          <div class="container dropdown_container">
+            <div class="row dropdown_row">
+              <div class="col-md-4">
+                <span class="text-uppercase text">Sub Category</span>
+                <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+              </ul>
+              </div>
+              {/* <!-- /.col-md-4  --> */}
+              <div class="col-md-4">
+              <span class="text-uppercase text">Sub Category</span>
+                <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+              </ul>
+              </div>
+              {/* <!-- /.col-md-4  --> */}
+              <div class="col-md-4">
+              <span class="text-uppercase text">Sub Category</span>
+                <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text" href="#">Link item</a>
+                </li>
+              </ul>
+              </div>
+              {/* <!-- /.col-md-4  --> */}
+              {/* <div class="col-md-4">
+                <a href="">
+                  <img src="https://dummyimage.com/200x100/ccc/000&text=image+link" alt="" class="img-fluid"/>
+                </a>
+                <p class="text">Short image call to action</p>
+
+              </div> */}
+              {/* <!-- /.col-md-4  --> */}
+            </div>
+          </div>
+          {/* <!--  /.container  --> */}
+
+
+        </div>
+      </li>
+
+
+
+
     </ul>
    
   </div>
@@ -289,26 +376,8 @@ function CategoriesBar() {
 
 </nav>
         </div>
+        
     )
 }
 
-// window.onload = function () 
-//  {
-//  const icon = document.querySelector(".fas fa-bars");
-//    const btn =document.querySelector(".navbar-toggler");
-//    const cancelicon = document.querySelector(".fas fa-times")
-
-//    btn.onclick = () =>
-//    {
-//      if(icon.className = ".fas fa-bars")
-//      {icon.classList.remove("fas fa-bars");
-//      icon.classList.add("fas fa-times");}
-//      else{
-//        icon.classList.add("fas fa-bars");
-//      icon.classList.remove("fas fa-times");
-//      }
-//    }
-
-//  }
-
-export default CategoriesBar
+export default Header

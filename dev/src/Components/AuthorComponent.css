@@ -1,5 +1,7 @@
 .container_author {
-    background: linear-gradient(120deg, #E91E63 0%, #D81B60 100%)
+    background: linear-gradient(120deg, #27E15E 0%, #19CA00BF 100%);
+    padding-top: 1px;
+padding-bottom: 1px
 }
 
 .container_a {
