@@ -10,10 +10,11 @@ import ThreeCardComponent from './Components/ThreeCardComponent';
 import CategoriesBar from "./Components/CategoriesBar";
 import BestSellingComponent from "./Components/BestSellingComponent"
 import Header from './Components/Header';
-import { BrowserRouter as Router,  Route } from "react-router-dom";
-import {Switch as Switch} from "react-router-dom"
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import HomeComponent from "./Components/HomeComponent";
 import React from 'react';
+import BestSellingProductComponent from './Components/BestSellingProductComponent';
+import { BarcodeScannerComponent } from './Components/BarcodeScannerComponent';
 // impor{Route as Switch} from 'react-router-dom't { Route } from 'react-router-dom';
 
 
@@ -22,8 +23,30 @@ function App() {
   return (
    
     <div className="App">
-      <Header/>
+      {/* <Header/>
       <HomeComponent/>
+      <BarcodeScannerComponent/>
+      <BestSellingProductComponent/>
+      <AuthorComponent/>
+      <Newsletter/>
+      <Footer/> */}
+<Header/>
+<Router>
+          <Switch>
+            <Route exact path='/' exact component={HomeComponent}/>
+            {/* <Route path='/services' component={Service}/>
+            <Route path='/AboutUsMain' component={AboutUsMain}/> 
+            <Route path='/recruitment' component={Recruitment}/> 
+            <Route path='/careers' component={Careers}/> 
+            <Route path='/clients' component={Client}/>
+            <Route path='/technology-services' component={TechnologyService}/>
+            <Route path='/recruitment-services' component={RecruitmentService}/>
+            <Route path='/technology' component={Homepage}/>
+            <Route path='/contact' component={Contact}/> */}
+          </Switch>
+      </Router>
+      <BarcodeScannerComponent/>
+      <BestSellingProductComponent/>
       <AuthorComponent/>
       <Newsletter/>
       <Footer/>

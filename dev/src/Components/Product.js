@@ -13,6 +13,7 @@ function Product({id,title,price,image}) {
             
 
       <div class="card h-100 shadow-sm">
+
         <a href="#">
           <img src={image} class="card-img-top" alt="product.title" />
         </a>
@@ -23,7 +24,11 @@ function Product({id,title,price,image}) {
         <div class="card-body">
           <div class="clearfix mb-3">
             <span class="float-start badge rounded-pill product__price">&#x20B9;{price}</span>
-
+            <span class="float-end">
+              
+              <i class="far fa-heart" style={{cursor: "pointer"}}></i>
+              
+            </span>
             
           </div>
           <h5 class="card-title">
@@ -39,11 +44,7 @@ function Product({id,title,price,image}) {
 
             
 
-            <span class="float-end">
-              
-<i class="far fa-heart" style={{cursor: "pointer"}}></i>
 
-            </span>
           </div>
         </div>
       </div>

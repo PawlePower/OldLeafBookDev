@@ -3,6 +3,10 @@ import './BestSellingComponent.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import muketeer from '../assets/musketeer.jpg';
 import Product from './Product';
+import { Component } from 'react'
+import OwlCarousel from 'react-owl-carousel';  
+import 'owl.carousel/dist/assets/owl.carousel.css';  
+import 'owl.carousel/dist/assets/owl.theme.default.css';  
 
 function BestSellingComponent({title}) {
     return (
