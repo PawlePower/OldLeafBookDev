@@ -1,0 +1,7 @@
+.container_ProductCard
+{
+    width: 100%;
+    height: 900px;
+    border: 1px solid gray;
+    text-align: center;
+}

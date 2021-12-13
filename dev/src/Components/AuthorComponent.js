@@ -1,5 +1,6 @@
 import React from 'react'
 import './AuthorComponent.css'
+import author from '../assets/author-bios.jpg'
 
 
 function AuthorComponent() {
@@ -11,7 +12,7 @@ function AuthorComponent() {
         <div class="card col-md-3 col-11">
             <div class="card-content">
                 <div class="card-body p-0">
-                    <div class="profile mb-4 mt-3"> <img src="https://i.imgur.com/Ur43esv.jpg"/> </div>
+                    <div class="profile mb-4 mt-3"> <img src={author}/> </div>
                     <div class="card-subtitle">
                         <p> <small class="text-muted"> <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.<i class="fas fa-quote-left fa-flip-horizontal"></i> </small> </p>
                     </div>
@@ -22,7 +23,7 @@ function AuthorComponent() {
         <div class="card col-md-3 col-11 second">
             <div class="card-content">
                 <div class="card-body p-0">
-                    <div class="profile mb-4 mt-3"> <img src="https://i.imgur.com/8RKXAIV.jpg"/> </div>
+                    <div class="profile mb-4 mt-3"> <img src={author}/> </div>
                     <div class="card-subtitle">
                         <p> <small class="text-muted"> <i class="fas fa-quote-left "></i>  Lorem ipsum dolor sit amet, consectetur adipisicing elit.<i class="fas fa-quote-left fa-flip-horizontal"></i> </small> </p>
                     </div>
@@ -33,7 +34,7 @@ function AuthorComponent() {
         <div class="card col-md-3 col-11 third">
             <div class="card-content">
                 <div class="card-body p-0">
-                    <div class="profile mb-4 mt-3"> <img src="https://i.imgur.com/J6l19aF.jpg"/> </div>
+                    <div class="profile mb-4 mt-3"> <img src={author}/> </div>
                     <div class="card-subtitle">
                         <p> <small class="text-muted"> <i class="fas fa-quote-left"></i>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. <i class="fas fa-quote-left fa-flip-horizontal"></i> </small> </p>
                     </div>
