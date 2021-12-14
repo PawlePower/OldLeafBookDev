@@ -34,6 +34,8 @@ function App() {
 <Router>
           <Switch>
             <Route exact path='/' exact component={HomeComponent}/>
+            <Route exact path='/best' exact component={BestSellingProductComponent}/>
+            <Route exact path='/news' exact component={Newsletter}/>
             {/* <Route path='/services' component={Service}/>
             <Route path='/AboutUsMain' component={AboutUsMain}/> 
             <Route path='/recruitment' component={Recruitment}/> 
@@ -45,11 +47,11 @@ function App() {
             <Route path='/contact' component={Contact}/> */}
           </Switch>
       </Router>
-      <BarcodeScannerComponent/>
+      {/* <BarcodeScannerComponent/>
       <BestSellingProductComponent/>
       <AuthorComponent/>
       <Newsletter/>
-      <Footer/>
+      <Footer/> */}
     </div>
       // <Router>
       //    <div className="App">
