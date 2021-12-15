@@ -15,6 +15,7 @@ import HomeComponent from "./Components/HomeComponent";
 import React from 'react';
 import BestSellingProductComponent from './Components/BestSellingProductComponent';
 import { BarcodeScannerComponent } from './Components/BarcodeScannerComponent';
+import LoginComponent from './Components/LoginComponent';
 // impor{Route as Switch} from 'react-router-dom't { Route } from 'react-router-dom';
 
 
@@ -36,7 +37,11 @@ function App() {
             <Route exact path='/' exact component={HomeComponent}/>
             <Route exact path='/best' exact component={BestSellingProductComponent}/>
             <Route exact path='/news' exact component={Newsletter}/>
-            {/* <Route path='/services' component={Service}/>
+            <Route exact path='/Login' exact component={LoginComponent}/>
+            {/* ----------------
+                For Reference
+
+            <Route path='/services' component={Service}/>
             <Route path='/AboutUsMain' component={AboutUsMain}/> 
             <Route path='/recruitment' component={Recruitment}/> 
             <Route path='/careers' component={Careers}/> 
