@@ -31,7 +31,7 @@ function App() {
       <AuthorComponent/>
       <Newsletter/>
       <Footer/> */}
-<Header/>
+{/* <Header/> */}
 <Router>
           <Switch>
             <Route exact path='/' exact component={HomeComponent}/>
