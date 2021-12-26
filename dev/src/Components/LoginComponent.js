@@ -1,13 +1,52 @@
-import React, { Component } from 'react'
+import React,  { Component,useState }  from 'react'
 import './LoginComponent.css'
-export class LoginComponent extends Component {
-	render() {
-		return (
-			<div>
-				
-			</div>
-		)
-	}
+import { GoogleLogin, GoogleLogout} from 'react-google-login';
+
+function LoginComponent() {
+
+	const clientId = "91463218346-oq2mcegvh37bclg3osjc7022cf45d51h.apps.googleusercontent.com";
+	const [showloginButton, setShowloginButton] = useState(true);
+    const [showlogoutButton, setShowlogoutButton] = useState(false);
+
+	const onLoginSuccess = (res) => {
+        console.log('Login Success:', res.profileObj);
+        setShowloginButton(false);
+        setShowlogoutButton(true);
+    };
+
+    const onLoginFailure = (res) => {
+        console.log('Login Failed:', res);
+    };
+
+    const onSignoutSuccess = () => {
+        alert("You have been logged out successfully");
+        console.clear();
+        setShowloginButton(true);
+        setShowlogoutButton(false);
+    };
+
+	return (
+		<div>
+            { showloginButton ?
+                <GoogleLogin
+                    clientId={clientId}
+                    buttonText="Sign In"
+                    onSuccess={onLoginSuccess}
+                    onFailure={onLoginFailure}
+                    cookiePolicy={'single_host_origin'}
+                    isSignedIn={true}
+                /> : null}
+
+            { showlogoutButton ?
+                <GoogleLogout
+                    clientId={clientId}
+                    buttonText="Sign Out"
+                    onLogoutSuccess={onSignoutSuccess}
+                >
+                </GoogleLogout> : null
+            }
+        </div>
+	)
 }
 
 export default LoginComponent
