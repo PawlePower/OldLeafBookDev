@@ -5,6 +5,14 @@
     margin-left: 42px;
 }
 
+.btn_login
+{
+  background-color: white;
+    border: none;
+    font-size: 13px;
+    font-weight: 800;
+    color: #146f4f;
+}
 
 .header__header
 {

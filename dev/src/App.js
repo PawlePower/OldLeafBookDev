@@ -16,6 +16,7 @@ import React from 'react';
 import BestSellingProductComponent from './Components/BestSellingProductComponent';
 import { BarcodeScannerComponent } from './Components/BarcodeScannerComponent';
 import LoginComponent from './Components/LoginComponent';
+import CategoriesComponent from './Components/CategoriesComponent';
 // impor{Route as Switch} from 'react-router-dom't { Route } from 'react-router-dom';
 
 
@@ -31,13 +32,16 @@ function App() {
       <AuthorComponent/>
       <Newsletter/>
       <Footer/> */}
-{/* <Header/> */}
+<Header/>
 <Router>
           <Switch>
             <Route exact path='/' exact component={HomeComponent}/>
             <Route exact path='/best' exact component={BestSellingProductComponent}/>
             <Route exact path='/news' exact component={Newsletter}/>
             <Route exact path='/Login' exact component={LoginComponent}/>
+            <Route exact path='/f' exact component={Footer}/>
+            <Route exact path='/featured' exact component={ThreeCardComponent}/>
+            <Route exact path='/cat' exact component={CategoriesComponent}/>
             {/* ----------------
                 For Reference
 

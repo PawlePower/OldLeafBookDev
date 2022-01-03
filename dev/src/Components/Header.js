@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useState} from 'react';
 import logo from '../assets/oldleaflogo.PNG';
 import './Header.css';
 import SearchIcon from '@material-ui/icons/Search'
+import Modal from 'react-modal'
 
   const scrollToTop = () =>{
     window.scrollTo({
@@ -25,7 +26,7 @@ if (icon.className=="fas fa-bars")
 
   }
 function Header() {
-
+const [modalIsOpen,setModelIsOpen]  = useState(false)
     return (
         <div className="header__container">
 <nav className="header__header">
@@ -47,8 +48,10 @@ function Header() {
            <div className="header__nav">
                <div className="header__link">
                    <div className="header__options">
-                   <span className="header__optionsLineOne">Hello AKshay</span>
-                   <span className="header__optionsLineTwo">Sign Out</span>
+                   <span className="header__optionsLineOne"></span>
+                   <span className="header__optionsLineTwo">
+                   <button onClick={()=>setModelIsOpen(true)}  className='btn_login'>Login/Sign up</button>
+                   </span>
                    </div>
                </div>
 
@@ -77,6 +80,15 @@ function Header() {
 
            </div>
         </nav>
+
+          <Modal isOpen={modalIsOpen} onRequestClose={()=> setModelIsOpen(false)} style={{zIndex:'99999'}}>
+          <div>
+            <h1>hello!!!</h1>
+          </div>
+          <div>
+            <button onClick={()=> setModelIsOpen(false)}>Close</button>
+          </div>  
+          </Modal>
 
 {/* --------------------------------------------------Categogies---------------------------------------------------------- */}
 
