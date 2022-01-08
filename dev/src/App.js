@@ -17,13 +17,14 @@ import BestSellingProductComponent from './Components/BestSellingProductComponen
 import { BarcodeScannerComponent } from './Components/BarcodeScannerComponent';
 import LoginComponent from './Components/LoginComponent';
 import CategoriesComponent from './Components/CategoriesComponent';
+import LoginSign from './Components/LoginSign';
 // impor{Route as Switch} from 'react-router-dom't { Route } from 'react-router-dom';
 
 
 
 function App() {
   return (
-   
+
     <div className="App">
       {/* <Header/>
       <HomeComponent/>
@@ -42,13 +43,16 @@ function App() {
             <Route exact path='/f' exact component={Footer}/>
             <Route exact path='/featured' exact component={ThreeCardComponent}/>
             <Route exact path='/cat' exact component={CategoriesComponent}/>
+            <Route exact path='/log' exact component={LoginSign}/>
+
+
             {/* ----------------
                 For Reference
 
             <Route path='/services' component={Service}/>
-            <Route path='/AboutUsMain' component={AboutUsMain}/> 
-            <Route path='/recruitment' component={Recruitment}/> 
-            <Route path='/careers' component={Careers}/> 
+            <Route path='/AboutUsMain' component={AboutUsMain}/>
+            <Route path='/recruitment' component={Recruitment}/>
+            <Route path='/careers' component={Careers}/>
             <Route path='/clients' component={Client}/>
             <Route path='/technology-services' component={TechnologyService}/>
             <Route path='/recruitment-services' component={RecruitmentService}/>
@@ -64,17 +68,17 @@ function App() {
     </div>
       // <Router>
       //    <div className="App">
-         
+
       //   <Switch>
       //     <Route exact path="/" component={HomeComponent}></Route>
 
       //     <Route path="/BestSellingComponent" component={BestSellingComponent} ></Route>
       //   </Switch>
-      
+
       //   </div>
       // </Router>
-      
-    
+
+
 
     // <div>
     //    <Header></Header>
